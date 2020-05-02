@@ -150,7 +150,7 @@ def draw(v_l, v_g, m, n, num):
 
 	#custom legend
 	legend_custom_lines = [Line2D([0], [0], color='blue'), Line2D([0], [0], color='darkorange'), Line2D([0], [0], color='red')]
-	ax.legend(legend_custom_lines, ["Equilibrio estable", "Estados metaestables", "Estados inestables"])
+	ax.legend(legend_custom_lines, ['Equilibrio estable', 'Estados metaestables', 'Estados inestables'])
 
 	plt.savefig('figure.pdf')
 	plt.show()
