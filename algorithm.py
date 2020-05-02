@@ -17,21 +17,21 @@ def F(v):
 
 	return _F_cache[v] 
 
-_F2_cache = {}
+_F1_cache = {}
 
 def F1(v):
-	if not v in _F2_cache:
-		_F2_cache[v] = v**3 - 6 * (v**2) - 11 * v - 5
+	if not v in _F1_cache:
+		_F1_cache[v] = v**3 - 6 * (v**2) - 11 * v - 5
 
-	return _F2_cache[v]
+	return _F1_cache[v]
 
-_F3_cache = {}
+_F2_cache = {}
 
 def F2(v):
-	if not v in _F3_cache:
-		_F3_cache[v] = 3 * (v**2) - 12 * v - 11
+	if not v in _F2_cache:
+		_F2_cache[v] = 3 * (v**2) - 12 * v - 11
 
-	return _F3_cache[v]
+	return _F2_cache[v]
 
 #unstable interval (obtained theoretically)
 unstable_v0 = -0.7589
@@ -154,13 +154,6 @@ def draw(v_l, v_g, m, n, num):
 
 	plt.savefig('figure.pdf')
 	plt.show()
-
-def parse_interval(s):
-	try:
-		v0, v1 = map(int, s.split(','))
-		return v0, v1
-	except:
-		raise argparse.ArgumentTypeError("Interval must be v0, v1")
 
 if __name__=='__main__':
 	parser = argparse.ArgumentParser(description="Algorithm to obtain v_l and v_g numerically using Maxwell's construction")
