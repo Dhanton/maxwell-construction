@@ -34,8 +34,8 @@ def F2(v):
 	return _F2_cache[v]
 
 #unstable interval (obtained theoretically)
-unstable_v0 = -0.7589
-unstable_v1 = 4.7689
+unstable_v0 = -0.76887
+unstable_v1 = 4.76887
 
 #struct to put together the function and its derivatives
 class Function:
