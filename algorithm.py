@@ -7,8 +7,6 @@ import argparse
 
 RESULTS_FILENAME = 'results.bin'
 
-#these functions use dynamic programming for speedup
-
 _F_cache = {}
 
 def F(v):
